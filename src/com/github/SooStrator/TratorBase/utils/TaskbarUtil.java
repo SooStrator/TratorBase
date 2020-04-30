@@ -11,7 +11,7 @@ public class TaskbarUtil {
 				Taskbar.getTaskbar().requestWindowUserAttention(window);
 			} catch(Exception e) {}
 		}else {
-			System.err.println("[Error] Taskbaranzeigen sind auf ihrem Gerät nicht supported");
+			System.err.println("[Error] Taskbar displays are not supported on your device");
 		}
 	}
 	
@@ -21,7 +21,7 @@ public class TaskbarUtil {
 				Taskbar.getTaskbar().setWindowProgressState(window, state);
 			} catch(Exception e) {}
 		}else {
-			System.err.println("[Error] Taskbaranzeigen sind auf ihrem Gerät nicht supported");
+			System.err.println("[Error] Taskbar displays are not supported on your device");
 		}
 	}
 	
@@ -31,7 +31,7 @@ public class TaskbarUtil {
 				Taskbar.getTaskbar().setProgressValue(value);
 			} catch(Exception e) {}
 		}else {
-			System.err.println("[Error] Taskbaranzeigen sind auf ihrem Gerät nicht supported");
+			System.err.println("[Error] Taskbar displays are not supported on your device");
 		}
 	}
 	

@@ -11,14 +11,14 @@ public class FileUtil {
 		File dir = new File(path + dirName);
 		if (dir.mkdir()) {
             try {
-				System.out.println("Datei erstellt: " + file.createNewFile());
+				System.out.println("File created: " + file.createNewFile());
 			} catch (IOException e) {
 				errorfound = true;
-				System.err.println("[Error]" + FileName + " konnte nicht erstellt werden");
+				System.err.println("[Error]" + FileName + " could not be created");
 			}
         } else {
         	if(!errorfound) {
-        		System.err.println("[Error]" + dir + " konnte nicht gefunden werden");
+        		System.err.println("[Error]" + dir + " not found");
         	}
         } 
 	}
@@ -30,11 +30,11 @@ public class FileUtil {
 				file.delete();
 			}else {
 				errorfound = true;
-				System.err.println("[Error]" + file.getName() + " wurde nicht gefunden");
+				System.err.println("[Error]" + file.getName() + " not found");
 			}
 		}catch(Exception e) {
 			if(!errorfound) {
-				System.err.println("[Error]"+ file.getName() + " konnte nicht gelöscht werden");
+				System.err.println("[Error]"+ file.getName() + " could not be deleted");
 			}
 		}
 	}
@@ -45,10 +45,12 @@ public class FileUtil {
 			if(file.exists()) {
 				file.deleteOnExit();
 			}else {
-				System.err.println("[Error]"+ file.getName() + " nicht gefunden");
+				System.err.println("[Error]"+ file.getName() + " not found");
 			}
 		}catch(Exception e) {
-			System.err.println("[Error]"+ file.getName() + " konnte nicht gelöscht werden");
+			if(!errorfound) {
+				System.err.println("[Error]"+ file.getName() + " could not be deleted");
+			}
 		}
 	}
 	

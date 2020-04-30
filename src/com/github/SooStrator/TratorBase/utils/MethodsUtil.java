@@ -19,7 +19,7 @@ public class MethodsUtil {
 		if(image != null) {
 			return image;
 		} else {
-			System.err.println("Error: Failed to make a screenshot");
+			System.err.println("Error: Failed to take a screenshot");
 			return null;
 		}
 	}
